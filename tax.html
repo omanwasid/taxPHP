@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tax.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="tax.js"></script>
+    <title>tax-calculator</title>
+</head>
+<div id="kea">
+    <div id="form">
+        <header>
+            <h1><b>Tax-Calculator</b></h1>
+        </header>
+<body>
+    </div>
+    <div id="fieldset">
+        <fieldset ALIGN="center">
+
+            <form name="Tax-calculator">
+
+                <label for="fname">Monetary Amount:</label><br><br>
+                <input type="number" id="money" name="fname"><br><br>
+                <label for="fname">Tax Percentage:</label><br><br>
+                <input type="number" id="tax" name="fname"><br><br>
+                <!-- <button id="calculate" type="button">Calculate</button><br><br> -->
+                <button onclick="calculate()" type="button">Calculate</button><br><br>
+                <p>Total Amount:</p>
+                <div id="result"></div>
+
+
+            </form>
+
+        </fieldset>
+    </div>
+</div>
+<script>
+</script>
+<?php
+$var = 'function calculate()';
+$var .= '{';
+$var .= '';
+$var .= 'var amount= parseFloat(document.getElementById("money").value);';
+$var .= 'var taxPercentage=parseFloat(document.getElementById("tax").value);';
+$var .= 'var taxAmount=(taxPercentage/100)*amount;';
+$var .= 'var finalAmount=amount-taxAmount;';
+$var .= 'document.getElementById("result").innerHTML = finalAmount;';
+$var .= '}';
+$var .= '';
+$var .= '';
+?>;
+
+
+</body>
+
+</html>
